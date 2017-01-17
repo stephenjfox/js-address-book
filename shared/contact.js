@@ -18,11 +18,11 @@ function Contact({ name, address, phoneNumber  }) {
   }
 
   // return POJO
-  return {
+  return Object.freeze({
     name: newName,
     address: newAddress,
     phone: newPhone
-  }
+  });
 }
 
 function safeTrim(stringish) {

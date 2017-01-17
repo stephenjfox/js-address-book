@@ -7,14 +7,11 @@ Type definition:
 function Contact({ name, address, phoneNumber  }) {
   // validate
   // name.trim(), address.trim(), phone against USA Regx
-  const newName = name.trim();
-  if (newName.length === 0) throw Error("No empty names allowed");
+  const newName = safeTrim(name);
 
-  const newAddress = address.trim();
-  if (newAddress.length === 0) throw Error("No empty addresses allowed");
+  const newAddress = safeTrim(address);
 
-  const newPhone = phoneNumber.trim();
-  if (newPhone.length === 0) throw Error("No empty phone numbers allowed");
+  const newPhone = safeTrim(phoneNumber);
 
   if (!/^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}/g.test(newPhone)) {
     throw Error("Only accepts USA valid phone numbers: (xxx) xxx-xxxx");
@@ -27,3 +24,15 @@ function Contact({ name, address, phoneNumber  }) {
     phone: newPhone
   }
 }
+
+function safeTrim(stringish) {
+  if (stringish !== undefined && typeof(stringish) === "string") {
+    return stringish.trim();
+  }
+  return "";
+}
+
+
+module.exports = {
+  Contact,
+};

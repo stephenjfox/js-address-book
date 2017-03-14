@@ -1,0 +1,44 @@
+[
+  {
+    "guid": "3ddfbe60-6de9-4b0d-9be8-07897174b01f",
+    "name": "Hubbard Irwin",
+    "phoneNumber": "+1 (851) 497-3817",
+    "address": "570 Everit Street, Advance, Puerto Rico, 9645"
+  },
+  {
+    "guid": "c2fc74a3-5cb0-492f-8ebf-d46a12993bea",
+    "name": "Ellison Tucker",
+    "phoneNumber": "+1 (853) 410-2809",
+    "address": "924 Bryant Street, Harrison, Colorado, 6174"
+  },
+  {
+    "guid": "e6101c2f-dd0b-419a-a6ad-6b607f331be6",
+    "name": "Lilia Roberson",
+    "phoneNumber": "+1 (878) 416-2559",
+    "address": "374 Ridge Boulevard, Osage, North Carolina, 140"
+  },
+  {
+    "guid": "37c03990-5158-48cb-b089-13d9b86bd5be",
+    "name": "Kerry Baxter",
+    "phoneNumber": "+1 (924) 578-2544",
+    "address": "452 Goodwin Place, Slovan, Delaware, 4353"
+  },
+  {
+    "guid": "67288378-d006-4f94-bc40-5e42eac1a5af",
+    "name": "Marla Morrison",
+    "phoneNumber": "+1 (969) 430-2433",
+    "address": "743 Haring Street, Dargan, Illinois, 319"
+  },
+  {
+    "guid": "a5094e50-a47c-4f9e-95f6-075c7b228d76",
+    "name": "Madeline Beasley",
+    "phoneNumber": "+1 (841) 469-3656",
+    "address": "236 Karweg Place, Cornfields, Alabama, 563"
+  },
+  {
+    "guid": "69e37034-7d0c-4bda-88c3-5b9da8eff90b",
+    "name": "Alana Mathews",
+    "phoneNumber": "+1 (925) 492-3781",
+    "address": "226 Dooley Street, Maybell, Guam, 2892"
+  }
+]

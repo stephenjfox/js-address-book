@@ -21,7 +21,17 @@ app.get('/', (req, res) => {
 
   res.json(contacts)
 })
+
 // show filtered contacts : GET
+app.get('/name/:name', (req, res) => {
+  console.log(`Filtering by name: '${req.params.name}'`)
+
+  const nameToFind = req.params.name || '' // return all, but more slowly
+  const hasName = contact => contact.name.indexOf(nameToFind) > -1
+  const filteredContacts = apiGateway.getContactsFiltered(hasName)
+
+  res.json(filteredContacts)
+})
 // create a new contact : POST/PUT
 // update an existing contact : PUT/PATCH
   // sub-set: delete an existing contact : DELETE

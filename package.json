@@ -1,0 +1,16 @@
+{
+  "name": "address-book",
+  "version": "1.0.0",
+  "description": "Simple address book, inspired by Idea Bag 2 (Android App)",
+  "main": "app.js",
+  "repository": "git@github.com:stephenjfox/js-address-book.git",
+  "author": "Stephen Fox <stevethecoder34@gmail.com>",
+  "license": "BSD",
+  "devDependencies": {
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3"
+  },
+  "scripts": {
+    "test:shared": "node shared/contact.spec.js | tap-spec"
+  }
+}

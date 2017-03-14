@@ -9,14 +9,15 @@ Type definition:
 function Contact({ name, address, phoneNumber  }) {
   // validate
   // name.trim(), address.trim(), phone against USA Regx
-  const newName = safeTrim(name);
+  if (name === undefined || !name.length) throw Error('Must have non-empty name')
+  const newName = safeTrim(name)
 
-  const newAddress = safeTrim(address);
+  const newAddress = safeTrim(address)
 
-  const newPhone = safeTrim(phoneNumber);
+  const newPhone = safeTrim(phoneNumber)
 
-  if (!USA_PHONE_REGEX.test(newPhone)) {
-    throw Error("Only accepts USA valid phone numbers: (xxx) xxx-xxxx");
+  if (newPhone.length > 0 && !USA_PHONE_REGEX.test(newPhone)) {
+    throw Error("Only accepts USA valid phone numbers: (xxx) xxx-xxxx")
   }
 
   // return POJO
@@ -24,17 +25,17 @@ function Contact({ name, address, phoneNumber  }) {
     name: newName,
     address: newAddress,
     phone: newPhone
-  });
+  })
 }
 
 function safeTrim(stringish) {
   if (stringish !== undefined && typeof(stringish) === "string") {
-    return stringish.trim();
+    return stringish.trim()
   }
-  return "";
+  return ""
 }
 
 
 module.exports = {
   Contact,
-};
+}

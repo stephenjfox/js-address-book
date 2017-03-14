@@ -1,3 +1,5 @@
+const USA_PHONE_REGEX = /^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}/g;
+
 /**
 Type definition:
 - A name
@@ -13,7 +15,7 @@ function Contact({ name, address, phoneNumber  }) {
 
   const newPhone = safeTrim(phoneNumber);
 
-  if (!/^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}/g.test(newPhone)) {
+  if (!USA_PHONE_REGEX.test(newPhone)) {
     throw Error("Only accepts USA valid phone numbers: (xxx) xxx-xxxx");
   }
 

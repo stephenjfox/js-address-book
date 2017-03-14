@@ -32,6 +32,7 @@ app.get('/name/:name', (req, res) => {
 
   res.json(filteredContacts)
 })
+
 // create a new contact : POST/PUT
 // update an existing contact : PUT/PATCH
   // sub-set: delete an existing contact : DELETE
